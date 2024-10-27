@@ -58,7 +58,10 @@
         background-color: #231332;
     }
     .bg-about {
-        background-color: #29153b;
+        background-color: #181424;
+    }
+    .bg-experience {
+        @apply  bg-gradient-to-r from-pink-800 to-purple-800
     }
   }
   
