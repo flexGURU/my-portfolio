@@ -1,21 +1,35 @@
-<div class="bg-main h-screen">
+<div class="bg-main h-auto">
+
+    <div class="flex lg:hidden p-5 flex-row items-center justify-between bg-background border-b border-b-slate-600">
+        <img src="../../../assets/signature (1).png" class="invert w-40" alt="Signature" routerLink="/home">
+        <i class="fa-solid fa-list fa-2x"></i>
+    </div>
+
+
+
+    <div class="p-10 block lg:hidden">
+        <img src="../../../assets/me.jpg" class="w-52 rounded-full" alt="">
+    </div>
+    
     <div class="flex justify-between p-10">
-        <div class="text-7xl text-white font-bold font-mono p-20 ">
-            <h1>MY NAME</h1>
-            <h1>IS JOHN</h1>
-            <h1 class="text-pink-600 word-art">MUKUNA ...</h1>
+
+        <div class="text-3xl sm:text-7xl text-white font-bold font-mono lg:p-20 ">
+            <img src="../../../assets/signature (1).png" class="hidden lg:block invert w-96" alt="Signature">
+
+            <h1>MY NAME <br> IS <span class="text-pink-600 word-art">JOHN MUKUNA</span></h1>
             <p class="mt-5 text-3xl">A developer from Kenya</p>
             
         </div>
         
     
-        <div class="p-10 ">
+        <div class="p-10 hidden lg:block">
             <img src="../../../assets/me.jpg" class="w-80 rounded-full" alt="">
         </div>
     </div>
 
     <div class="ml-40">
-        <button class="btn"> Work with me
+        <button class="btn hover">
+             Work with me
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </button>
     </div>

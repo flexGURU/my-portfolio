@@ -1,0 +1,50 @@
+<div class="grid grid-cols-1 lg:grid-cols-12 p-4 sm:p-8 lg:p-20 mt-2 gap-y-8 lg:gap-y-0 ">
+    <!-- Contact Info Section -->
+    <div class="col-span-1 lg:col-span-3 flex flex-col lg:items-end space-y-4">
+        <h1 class="text-2xl sm:text-3xl font-light lg:self-start">Get In Touch</h1>
+
+        <div class="contact-card ">
+            <i class="fa-regular fa-envelope text-lg"></i>
+            <p class="text-sm sm:text-base">mukunajohn329&#64;gmail.com</p>
+        </div>
+
+        <div class="contact-card flex items-center space-x-3 lg:justify-end">
+            <i class="fa-solid fa-phone text-lg"></i>
+            <p class="text-sm sm:text-base">+254710257237</p>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="col-span-1 lg:col-span-9 bg-experience p-6 sm:p-10 lg:p-16 rounded-sm">
+        <form #formData class="space-y-6 sm:space-y-8">
+            <div class="flex flex-col sm:flex-row sm:space-x-5">
+                <!-- First Name -->
+                <div class="w-full mb-4 sm:mb-0">
+                    <label for="firstName" class="block text-sm sm:text-base">FIRST NAME</label>
+                    <input id="firstName" type="text" placeholder="Name" required class="input">
+                </div>
+
+                <!-- Email -->
+                <div class="w-full">
+                    <label for="email" class="block text-sm sm:text-base">EMAIL</label>
+                    <input id="email" type="email" placeholder="Email" required class="input">
+                </div>
+            </div>
+
+            <!-- Subject -->
+            <div class="w-full">
+                <label for="subject" class="block text-sm sm:text-base">SUBJECT</label>
+                <input id="subject" type="text" placeholder="Subject" required class="input">
+            </div>
+
+            <!-- Message -->
+            <div class="w-full">
+                <label for="message" class="block text-sm sm:text-base">Your Message</label>
+                <textarea rows="6" id="message" placeholder="Your Message" required class="input"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="btn-hover p-3 sm:p-4 bg-main w-full text-white rounded">Send Message</button>
+        </form>
+    </div>
+</div>

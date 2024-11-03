@@ -1,27 +1,37 @@
 <div class="flex h-screen">
-  <div class="w-1/4 bg-gray-200 hidden md:block"> 
+  <div class=" bg-gray-200 hidden lg:block"> 
     <app-sidebar></app-sidebar>
   </div>
   
-  <div class="w-full md:w-3/4 overflow-y-auto h-full bg-main text-white"> 
-    <div>
-    <app-home></app-home>
-    </div>    
-
-    <div>
-      <app-about></app-about>
+  <div class="w-full  h-screen md:h-auto overflow-y-auto bg-main text-white"> 
+    <!-- Home Section -->
+    <div id="home" class="bg-main py-10 px-5 md:px-20">
+      <app-home></app-home>
     </div>
 
-    <div>
+    <!-- Projects Section -->
+    <div id="projects" class="bg-background py-10 px-5 md:px-20">
+      <app-projects></app-projects>
+    </div>
+
+    <!-- Experience Section -->
+    <div id="experience" class="bg-background py-10 px-5 md:px-20">
       <app-experience></app-experience>
     </div>
 
-    <div>
+    <!-- Specialities Section -->
+    <div id="specialities" class="bg-background py-10 px-5 md:px-20">
       <app-specialities></app-specialities>
     </div>
 
-    <div>
-      <app-projects></app-projects>
+    <!-- Contact Section -->
+    <div id="contact" class="bg-background py-10 px-5 md:px-20">
+      <app-contact></app-contact>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="bg-background py-10 px-5 md:px-20">
+      <app-footer></app-footer>
     </div>
   </div>
 </div>
