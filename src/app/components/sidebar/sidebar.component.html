@@ -6,12 +6,55 @@
         </div>
 
         <hr class="border-pink-600 w-3/4 mx-auto border-t-2">
-        <ul class="ml-8 font-extralight h3 p-5 cursor-pointer">
-            <li class="m-5" routerLink="/contact">HOME</li>
+        <ul class="ml-8 font-extralight space-y-10 h3 p-5 cursor-pointer">
+            <!-- <li class="m-5"  ><a href="">HOME</a></li>
             <li class="m-5"><a href="#projects">MY WORK</a></li>
             <li class="m-5"><a href="#experience">EXPERIENCE</a></li>
             <li class="m-5"><a href="#specialities">SPECIALITIES</a></li>
-            <li class="m-5"><a href="#contact">CONTACT ME</a></li>
+            <li class="m-5"><a href="#contact">CONTACT ME</a></li> -->
+            <li>
+                <a 
+                  href="#home" 
+                  [class.active]="currentFragment === 'home' || !currentFragment"
+                  (click)="scrollToFragment('home', $event)">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#projects" 
+                  [class.active]="currentFragment === 'projects'"
+                  (click)="scrollToFragment('projects', $event)">
+                  My Work
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#experience" 
+                  [class.active]="currentFragment === 'experience'"
+                  (click)="scrollToFragment('experience', $event)">
+                  Experience
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#specialities" 
+                  [class.active]="currentFragment === 'specialities'"
+                  (click)="scrollToFragment('specialities', $event)">
+                  Specialities
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#contact" 
+                  [class.active]="currentFragment === 'contact'"
+                  (click)="scrollToFragment('contact', $event)">
+                  Contact Me
+                </a>
+              </li>
+            
+            
+
           </ul>
           
 

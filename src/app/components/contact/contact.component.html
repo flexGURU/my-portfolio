@@ -16,35 +16,59 @@
 
     <!-- Form Section -->
     <div class="col-span-1 lg:col-span-9 bg-experience p-6 sm:p-10 lg:p-16 rounded-sm">
-        <form #formData class="space-y-6 sm:space-y-8">
+        <form [formGroup]="contactForm" (submit)="send()" class="space-y-6 sm:space-y-8">
             <div class="flex flex-col sm:flex-row sm:space-x-5">
                 <!-- First Name -->
                 <div class="w-full mb-4 sm:mb-0">
                     <label for="firstName" class="block text-sm sm:text-base">FIRST NAME</label>
-                    <input id="firstName" type="text" placeholder="Name" required class="input">
+                    <input 
+                    formControlName="from_name"
+                    id="firstName" 
+                    type="text" 
+                    placeholder="Name" 
+                    required class="input">
                 </div>
 
                 <!-- Email -->
                 <div class="w-full">
                     <label for="email" class="block text-sm sm:text-base">EMAIL</label>
-                    <input id="email" type="email" placeholder="Email" required class="input">
+                    <input
+                    formControlName="email" 
+                    id="email" 
+                    type="email" 
+                    placeholder="Email" 
+                    required class="input">
                 </div>
             </div>
 
             <!-- Subject -->
             <div class="w-full">
                 <label for="subject" class="block text-sm sm:text-base">SUBJECT</label>
-                <input id="subject" type="text" placeholder="Subject" required class="input">
+                <input 
+                formControlName="subject"
+                id="subject" 
+                type="text" 
+                placeholder="Subject" 
+                required class="input">
             </div>
 
             <!-- Message -->
             <div class="w-full">
                 <label for="message" class="block text-sm sm:text-base">Your Message</label>
-                <textarea rows="6" id="message" placeholder="Your Message" required class="input"></textarea>
+                <textarea 
+                formControlName="message"
+                rows="6" 
+                id="message" 
+                placeholder="Your Message" 
+                required class="input"
+                ></textarea>
             </div>
 
             <!-- Submit Button -->
-            <button class="btn-hover p-3 sm:p-4 bg-main w-full text-white rounded">Send Message</button>
+            <button 
+            class="btn-hover p-3 sm:p-4 bg-main w-full text-white rounded"
+            [disabled]="contactForm.invalid"
+            >Send Message</button>
         </form>
     </div>
 </div>

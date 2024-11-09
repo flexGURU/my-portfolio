@@ -1,6 +1,20 @@
+// main.ts
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import { provideRouter, ExtraOptions, withRouterConfig } from '@angular/router';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+const routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64] // Adjust the offset for any fixed headers
+};
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(
+      [
+        // Define your routes here if needed
+      ],
+      withRouterConfig(routerOptions) // Apply the router options
+    )
+  ]
+});
