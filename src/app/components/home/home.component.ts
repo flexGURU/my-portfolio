@@ -16,9 +16,6 @@ export class HomeComponent {
 
   constructor(private router: Router){}
 
- 
-  
-
   scrollToFragment(fragment: string, event: MouseEvent) {
     event.preventDefault();
     const element = document.querySelector(`#${fragment}`);
@@ -30,6 +27,15 @@ export class HomeComponent {
       });
     }
   }
+
+  downloadResume(){
+    let link = document.createElement('a');
+    link.download = 'NGANGA_MUKUNA_RESUME.pdf'
+    link.href = "../../../assets/JOHN MUKUNA NGANGA RESUME.pdf"
+    link.click();
+  }
+
+
 
 
 

@@ -3,6 +3,7 @@ import { ASTWithName } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -15,7 +16,8 @@ import emailjs from '@emailjs/browser';
 export class ContactComponent {
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private toastr: ToastrService
   ){}
 
   contactForm: FormGroup = this.fb.group({
@@ -41,9 +43,8 @@ export class ContactComponent {
       subject: this.contactForm.value.subject,
       message: this.contactForm.value.message
     });
-    this.contactForm.reset()
-
-    alert("email sent")
+    this.contactForm.reset();
+    this.toastr.success('Email sent succesfully')
       
     }
     

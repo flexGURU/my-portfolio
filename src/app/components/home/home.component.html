@@ -2,7 +2,7 @@
 
     <div class="flex lg:hidden p-5 flex-row items-center justify-between bg-background border-b border-b-slate-600">
         <img src="../../../assets/signature (1).png" class="invert w-40" alt="Signature" routerLink="/home">
-        <i class="fa-solid fa-list fa-2x"></i>
+        <!-- <i class="fa-solid fa-list fa-2x"></i> -->
     </div>
 
 
@@ -19,6 +19,11 @@
             <h1>MY NAME <br> IS <span class="text-pink-600 word-art">JOHN MUKUNA</span></h1>
             <p class="mt-5 text-3xl">A developer from Kenya</p>
             
+            <div class="p-4 mt-5 border border-pink-600 rounded-xl">
+                <p class="text-lg font-normal">
+                    Just as every precise rep sculpts muscle from chaos, I forge scalable applications from raw code, transforming complex problems into lean, powerful solutions that flex under pressure and endure through every load test – because in both the gym and the codebase, it's not about brute force, but about perfect form and progressive architecture that builds strength cycle by cycle, commit by commit.                </p>
+
+            </div>
         </div>
         
     
@@ -27,9 +32,8 @@
         </div>
     </div>
 
-    <div class="ml-40">
-        <button class="btn hover"
-        >
+    <div class="ml-40 flex flex-col space-y-2 sm:flex-row justify-between">
+        <button class="btn hover">
         <a 
         href="#contact" 
         (click)="scrollToFragment('contact', $event)">
@@ -37,6 +41,13 @@
       </a>
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </button>
+
+        <button (click)="downloadResume()" class="btn hover">
+       
+      <i class="fa-solid fa-download"></i>     
+      Resume
+   
+    </button>
     </div>
     
 
