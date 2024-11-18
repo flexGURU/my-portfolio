@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, HostListener, OnDestroy } from '@angular/core';
 import { Router,ActivatedRoute, NavigationEnd, RouterLink, RouterLinkActive } from '@angular/router';
-import { InterSectionObserver } from '@syncfusion/ej2-grids';
 
 
 @Component({
